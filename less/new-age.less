@@ -96,17 +96,17 @@ p {
         background-color: transparent;
         border-color: transparent;
         .navbar-header .navbar-brand {
-            color: fade(white, 70%);
+            color: fade(@gray-darker, 70%);
             &:hover,
             &:focus {
-                color: white;
+                color: @gray-darker;
             }
         }
         .nav > li > a,
         .nav > li > a:focus {
-            color: fade(white, 70%);
+            color: fade(@gray-darker, 70%);
             &:hover {
-                color: white;
+                color: @gray-darker;
             }
         }
         &.affix {
@@ -137,10 +137,7 @@ header {
     width: 100%;
     min-height: auto;
     overflow-y: hidden;
-    background: url("../img/bg-pattern.png"), @theme-secondary; /* fallback for old browsers */
-    background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, @theme-secondary , @theme-tertiary); /* Chrome 10-25, Safari 5.1-6 */
-    background: url("../img/bg-pattern.png"), linear-gradient(to left, @theme-secondary , @theme-tertiary); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: white;
+    color: @gray-darker;
     .header-content {
         text-align: center;
         padding: 150px 0 50px;
@@ -154,11 +151,17 @@ header {
                 margin-bottom: 30px;
                 font-size: 30px;
             }
+            .snap {
+
+                img {
+                    width: 200px;
+                }
+            }
             .list-badges {
-                margin-bottom: 25px;
+                // margin-bottom: 25px;
                 img {
                     height: 60px;
-                    margin-bottom: 25px;
+                    // margin-bottom: 25px;
                 }
             }
         }
@@ -206,37 +209,6 @@ section {
     padding: 100px 0;
     h2 {
         font-size: 50px;
-    }
-}
-
-section.features {
-    .section-heading {
-        h2 {
-            margin-top: 0;
-        }
-        p {
-            margin-bottom: 0;
-        }
-        margin-bottom: 100px;
-    }
-    .feature-item {
-        text-align: center;
-        margin-bottom: 100px;
-        h3 {
-            font-size: 30px;
-        }
-        i {
-            font-size: 80px;
-              background: -webkit-linear-gradient(to left, @theme-secondary , @theme-tertiary);
-              background: linear-gradient(to left, @theme-secondary , @theme-tertiary);
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-        }
-    }
-    @media(min-width: 992px) {
-        .feature-item {
-            max-width: none;
-        }
     }
 }
 
