@@ -172,6 +172,9 @@ header .header-content .header-content-inner h1 {
   margin-bottom: 30px;
   font-size: 30px;
 }
+header .header-content .header-content-inner .snap {
+  padding-top: 40px;
+}
 header .header-content .header-content-inner .snap img {
   width: 200px;
 }
@@ -180,6 +183,7 @@ header .header-content .header-content-inner .list-badges img {
 }
 header .device-container {
   max-width: 300px;
+  padding-top: 20px;
   margin: 0 auto 100px;
 }
 header .device-container .screen img {
