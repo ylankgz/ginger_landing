@@ -146,10 +146,11 @@ header {
             position: relative;
             max-width: 500px;
             margin: 0 auto;
-            h1 {
+            h2 {
                 margin-top: 0;
                 margin-bottom: 30px;
                 font-size: 30px;
+
             }
             .snap {
                 padding-top: 40px;
@@ -186,8 +187,8 @@ header {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
-                h1 {
-                    font-size: 35px;
+                h2 {
+                    font-size: 25px;
                 }
             }
         }
@@ -198,8 +199,12 @@ header {
         }
     }
     @media (min-width: 992px) {
-        .header-content .header-content-inner h1 {
-            font-size: 50px;
+        .header-content .header-content-inner {
+            top: 57%;
+        }
+        .header-content .header-content-inner h2 {
+            margin: 0; 
+            font-size: 30px;
         }
     }
 }
@@ -221,6 +226,9 @@ section.contact {
         i {
             color: @brand-instagram;
         }
+    }
+    form {
+        text-align: left;
     }
     ul.list-social {
         margin-bottom: 0;

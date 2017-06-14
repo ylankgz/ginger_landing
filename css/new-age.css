@@ -17,6 +17,7 @@
 }
 .alt-font {
   font-family: 'Helvetica', 'Arial', 'sans-serif';
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -89,6 +90,7 @@ p {
 }
 .navbar-default .nav > li > a {
   font-family: 'Helvetica', 'Arial', 'sans-serif';
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 11px;
@@ -167,7 +169,7 @@ header .header-content .header-content-inner {
   max-width: 500px;
   margin: 0 auto;
 }
-header .header-content .header-content-inner h1 {
+header .header-content .header-content-inner h2 {
   margin-top: 0;
   margin-bottom: 30px;
   font-size: 30px;
@@ -205,8 +207,8 @@ header .device-container .screen img {
     top: 50%;
     transform: translateY(-50%);
   }
-  header .header-content .header-content-inner h1 {
-    font-size: 35px;
+  header .header-content .header-content-inner h2 {
+    font-size: 25px;
   }
   header .device-container {
     max-width: none;
@@ -215,8 +217,12 @@ header .device-container .screen img {
   }
 }
 @media (min-width: 992px) {
-  header .header-content .header-content-inner h1 {
-    font-size: 50px;
+  header .header-content .header-content-inner {
+    top: 57%;
+  }
+  header .header-content .header-content-inner h2 {
+    margin: 0;
+    font-size: 30px;
   }
 }
 section {
@@ -234,6 +240,9 @@ section.contact h2 {
 }
 section.contact h2 i {
   color: #c13584;
+}
+section.contact form {
+  text-align: left;
 }
 section.contact ul.list-social {
   margin-bottom: 0;
@@ -315,6 +324,7 @@ footer ul li a.active {
 }
 .btn {
   font-family: 'Helvetica', 'Arial', 'sans-serif';
+  font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
   border-radius: 300px;
