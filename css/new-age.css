@@ -33,11 +33,11 @@ a {
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
-  color: #fdcc52;
+  color: #fd7752;
 }
 a:hover,
 a:focus {
-  color: #fcbd20;
+  color: #fc4f20;
 }
 hr {
   max-width: 100px;
@@ -77,11 +77,11 @@ p {
   font-family: 'TravelingTypewriter', 'Helvetica', 'Arial', 'sans-serif';
   font-weight: 200;
   letter-spacing: 1px;
-  color: #fdcc52;
+  color: #fd7752;
 }
 .navbar-default .navbar-header .navbar-brand:hover,
 .navbar-default .navbar-header .navbar-brand:focus {
-  color: #fcbd20;
+  color: #fc4f20;
 }
 .navbar-default .navbar-header .navbar-toggle {
   font-size: 12px;
@@ -101,11 +101,11 @@ p {
 }
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus:hover {
-  color: #fdcc52;
+  color: #fd7752;
 }
 .navbar-default .nav > li.active > a,
 .navbar-default .nav > li.active > a:focus {
-  color: #fdcc52 !important;
+  color: #fd7752 !important;
   background-color: transparent;
 }
 .navbar-default .nav > li.active > a:hover,
@@ -141,7 +141,7 @@ p {
   }
   .navbar-default.affix .navbar-header .navbar-brand:hover,
   .navbar-default.affix .navbar-header .navbar-brand:focus {
-    color: #fdcc52;
+    color: #fd7752;
   }
   .navbar-default.affix .nav > li > a,
   .navbar-default.affix .nav > li > a:focus {
@@ -149,7 +149,7 @@ p {
   }
   .navbar-default.affix .nav > li > a:hover,
   .navbar-default.affix .nav > li > a:focus:hover {
-    color: #fdcc52;
+    color: #fd7752;
   }
 }
 header {
@@ -231,20 +231,21 @@ section {
 section h2 {
   font-size: 50px;
 }
-section.contact {
+section.friends {
   text-align: center;
+  color: white;
 }
-section.contact h2 {
+section.friends h2 {
   margin-top: 0;
   margin-bottom: 25px;
 }
-section.contact h2 i {
+section.friends h2 i {
   color: #e0001b;
 }
-section.contact .phWrapper {
+section.friends .phWrapper {
   background: #ccccff;
 }
-section.contact .videoWrapper {
+section.friends .videoWrapper {
   position: relative;
   padding-bottom: 56.25%;
   /* 16:9 */
@@ -255,7 +256,38 @@ section.contact .videoWrapper {
   padding-right: 0;
   margin-bottom: 20px;
 }
-section.contact .videoWrapper iframe {
+section.friends .videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+section.contact {
+  text-align: center;
+}
+section.contact h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+section.contact h2 i {
+  color: #e0001b;
+}
+section.contact .creds {
+  padding-bottom: 50px;
+}
+section.contact .mapWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 20px;
+}
+section.contact #map {
   position: absolute;
   top: 0;
   left: 0;
@@ -323,12 +355,17 @@ footer ul li a.active {
   text-decoration: none;
 }
 .bg-primary {
-  background: #fdcc52;
-  background: -webkit-linear-gradient(#fdcc52, #fdc539);
-  background: linear-gradient(#fdcc52, #fdc539);
+  background: #fd7752;
+  background: -webkit-linear-gradient(#fd7752, #fd6339);
+  background: linear-gradient(#fd7752, #fd6339);
+}
+.bg-secondary {
+  background: #7b4397;
+  background: -webkit-linear-gradient(#7b4397, #6d3b85);
+  background: linear-gradient(#7b4397, #6d3b85);
 }
 .text-primary {
-  color: #fdcc52;
+  color: #fd7752;
 }
 .no-gutter > [class*='col-'] {
   padding-right: 0;
@@ -344,8 +381,8 @@ footer ul li a.active {
 .btn-outline:active,
 .btn-outline.active {
   color: white;
-  background-color: #fdcc52;
-  border-color: #fdcc52;
+  background-color: #fd7752;
+  border-color: #fd7752;
 }
 .btn {
   font-family: 'Helvetica', 'Arial', 'sans-serif';

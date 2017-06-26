@@ -32,7 +32,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <script src="https://api-maps.yandex.ru/2.1/?lang=en_US" type="text/javascript"></script>
 </head>
 
 <body id="page-top">
@@ -40,20 +40,23 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button> -->
+                </button>
                 <a class="navbar-brand page-scroll" href="#page-top">Ginger</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#friends">About</a>
+                    </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                 </ul>
-            </div> -->
+            </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
@@ -100,7 +103,7 @@
         </div>
     </header>
 
-    <section id="contact" class="contact bg-primary">
+    <section id="friends" class="friends bg-secondary">
         <div class="container">
             <h2>We <i class="fa fa-heart"></i> new friends!</h2>
             <br>
@@ -116,10 +119,37 @@
                         <iframe width="700" height="394" src="https://www.youtube.com/embed/7XeWacTWyaE" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
-                <div class="col-xs-12">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact bg-primary">
+        <div class="container">
+            <h2>Contact us!</h2>
+            <br>
+            <div class="row">
+                <div class="col-md-6 col-sm-6">
+                    <div class="mapWrapper" >
+                        <div id="map" style="width: 500px; height: 405px">
+                    </div>
+                    </div>
+                </div>
+            
+                <div class="col-md-6 col-sm-6">
+                    <div class="creds">
+                        <p>Our address: 1001 46th St, Emeryville CA</p>
+                        <p>Our email: support@getginger.me</p>
+                    </div>
+                    
                     <ul class="list-inline list-social">
                         <li class="social-twitter">
-                            <a target="_blank" href="mailto:support@getginger.me"><i class="fa fa-envelope"></i></a>
+                            <a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li class="social-facebook">
+                            <a target="_blank" href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li class="social-instagram">
+                            <a target="_blank" href="https://www.instagram.com/ginger_imessage/"><i class="fa fa-instagram"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -133,6 +163,26 @@
         </div>
     </footer>
 
+    <script type="text/javascript">
+        ymaps.ready(init);
+        var myMap, 
+            myPlacemark;
+
+        function init(){ 
+            myMap = new ymaps.Map("map", {
+                center: [37.83, -122.27],
+                zoom: 11
+            }); 
+            
+            myPlacemark = new ymaps.Placemark([37.83, -122.27], {
+                hintContent: 'We are here!',
+                balloonContent: '1001 46th St, Emeryville CA'
+            });
+            
+            myMap.geoObjects.add(myPlacemark);
+            myMap.behaviors.disable('scrollZoom');
+        }
+    </script>
     <!-- jQuery -->
     <script src="lib/jquery/jquery.min.js"></script>
 
